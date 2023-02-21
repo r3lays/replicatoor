@@ -5,17 +5,13 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "listings-indexer",
-    "listings-publisher",
-    "listings-manager",
-    "sales-publisher",
-    "mints-publisher",
-    "listings-cancels"
+    "replicatoor-api",
+    "replicatoor-extension"
   ],
   "scripts": {
-    "listings-indexer": "yarn workspace listings-indexer",
-    "listings-cancels": "yarn workspace listings-cancels",
-    "li": "yarn listings-indexer build && yarn listings-indexer start",
-    "lp": "yarn listings-publisher build && yarn listings-publisher start"
+    "replicatoor-api": "yarn workspace listings-indexer",
+    "replicatoor-extension": "yarn workspace listings-cancels",
+    "ra":"",
+    "re": ""
   }
 }
