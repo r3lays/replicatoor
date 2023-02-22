@@ -1,17 +1,29 @@
 {
-  "name": "replicatoor",
+  "name": "module-monorepo",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "replicatoor-api",
-    "replicatoor-extension"
+    "listings-indexer",
+    "listings-publisher",
+    "listings-manager",
+    "sales-publisher",
+    "mints-publisher",
+    "listings-cancels"
   ],
   "scripts": {
-    "replicatoor-api": "yarn workspace listings-indexer",
-    "replicatoor-extension": "yarn workspace listings-cancels",
-    "ra":"",
-    "re": ""
+    "listings-indexer": "yarn workspace listings-indexer",
+    "listings-cancels": "yarn workspace listings-cancels",
+    "listings-publisher": "yarn workspace listings-publisher",
+    "listings-manager": "yarn workspace listings-manager",
+    "sales-publisher": "yarn workspace sales-publisher",
+    "mints-publisher": "yarn workspace mints-publisher",
+    "li": "yarn listings-indexer build && yarn listings-indexer start",
+    "lp": "yarn listings-publisher build && yarn listings-publisher start",
+    "lm": "yarn listings-manager build && yarn listings-manager start",
+    "sp": "yarn sales-publisher build && yarn sales-publisher start",
+    "mt": "yarn mints-publisher build && yarn mints-publisher start",
+    "lc": "yarn listings-cancels build && yarn listings-cancels start"
   }
 }
